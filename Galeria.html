@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdulería - Galeria</title>
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
+    <style>
+      .footer-home{
+        color: white;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        height: 90px;
+        bottom: 0;
+        width: 100%;
+      }
+      .img-gallery{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="static/img/icon/verduleria.png" width="64px" height="64px" /></a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="Inicio.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Galeria.html">Galería</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Clientes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="forms/Pedidos.html">Verduleria La del Barrio</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+     <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4  mb-3">
+          <img src="static/img/product/frutas-verduras.jpg" alt="" class="img-gallery">
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <img src="static/img/product/canasto.jpg" alt="" class="img-gallery">
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <img src="static/img/product/verduleria.jpg" alt="" class="img-gallery ">
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <img src="static/img/product/verduras.jpg" alt="" class="img-gallery">
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <img src="static/img/product/frutas.jpg" alt="" class=" img-gallery">
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <img src="static/img/product/canasto.jpg" alt="" class="img-gallery">
+        </div>
+      </div>
+     </div>
+      
+      
+     <footer class="bg-dark footer-home">
+      Aprendiendo HTML 	&nbsp; <span id="anio"></span>
+    </footer>
+    <script src="static/js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="static/js/popper/popper.min.js"></script>
+    <script src="static/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        $('#anio').text(new Date().getFullYear());
+
+      });
+
+      
+    </script> 
+    
+</body>
+</html>

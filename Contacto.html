@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdulería - Contacto</title>
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
+    <style>
+      .form-label{
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+      }
+      .button-form{
+        margin-top: 16px;
+        width: 48%;
+        
+      }
+      .footer-home{
+        color: white;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        height: 90px;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+</head>
+
+<body>
+  <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="static/img/icon/verduleria.png" width="64px" height="64px" /></a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="Inicio.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Galeria.html">Galería</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Clientes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="forms/Pedidos.html">Verduleria La del Barrio</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <!-- /navbar -->
+  <!-- form -->
+ <div class="container">
+   <header>
+    <h2 class="text-start">Contacto</h2>
+   </header>
+ </div>
+ <div class="container mb-5">
+   <div class="row g-3">
+     <div class="col-12 col-md-6">
+      <label for="txt-run" class="form-label">Run o Rut</label>
+      <input type="text" class="form-control" id="txt-run" placeholder="Rut o Run tipo : 12345678-9">
+     </div>
+     <div class="col-12 col-md-6">
+      <label for="txt-nombres" class="form-label">Nombres</label>
+      <input type="text" class="form-control" id="txt-nombres" placeholder="Ejemplo : 'Maria José'">
+     </div>
+     <div class="col-12 col-md-6">
+      <label for="txt-apellido-paterno" class="form-label">Primer apellido</label>
+      <input type="text" class="form-control" id="txt-apellido-paterno" placeholder="Ingrese su primer apellido">
+     </div>
+     <div class="col-12 col-md-6">
+      <label for="txt-apellido-materno" class="form-label">Segúndo apellido</label>
+      <input type="text" class="form-control" id="txt-apellido-materno" placeholder="Ingrese su segundo apellido">
+     </div>
+     <div class="col-12 col-md-6">
+      <label for="txt-email" class="form-label">Correo Electronico</label>
+      <input type="text" class="form-control" id="txt-email" placeholder="ejemplo@internet.com">
+     </div>
+     <div class="col-12 col-md-6">
+      <label for="txt-telefono" class="form-label">Teléfono</label>
+      <input type="text" class="form-control" id="txt-telefono" placeholder="Ejemplo : 99999999" onkeypress="return validateNumberKey(event);">
+     </div>
+     <div class="col-12">
+      <label for="txt-asunto" class="form-label">Ingrese motívo de contacto : </label>
+      <textarea class="form-control" id="txt-asunto" rows="5"></textarea>
+     </div>
+     <div class="col-12 text-center">
+      <input type="button" class="button-form btn btn-primary" id="btn-enviar" value="ENVIAR" onclick="enviar()" >
+     </div>
+   </div>
+ </div>
+
+  <!-- footer -->
+      
+    
+  <footer class="bg-dark footer-home">
+    Aprendiendo HTML 	&nbsp; <span id="anio"></span>
+  </footer>
+      <script src="static/js/jquery/jquery-3.6.0.min.js"></script>
+      <script src="static/js/popper/popper.min.js"></script>
+      <script src="static/js/bootstrap/bootstrap.min.js"></script>
+      <script src="static/js/custom/form-enviar-asunto.js"></script>
+      <script src="static/js/custom/validations.js"></script>
+      <script type="text/javascript">
+    
+        $(document).ready(function(){
+    
+          $('#anio').text(new Date().getFullYear());
+    
+          $('#btn-enviar').click(function(){
+            validarFormContacto();
+          });
+    
+    
+        });
+    
+        
+      </script> 
+    </body>
+    
+    </html>  
+    
+</body>
+</html>
